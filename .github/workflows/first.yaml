@@ -4,11 +4,20 @@ on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: ubuntu-18.04
+
+    runs-on: ubuntu-20.04
+    
     steps:
       - name: echo a string
         run: echo "Just a test"
+
       - name: multiline script
         run: | 
           node -v
           npm -v
+    
+      - name: python Command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
