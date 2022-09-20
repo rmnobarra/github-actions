@@ -6,7 +6,7 @@ jobs:
   run-shell-command:
 
     runs-on: ubuntu-20.04
-    
+
     steps:
       - name: echo a string
         run: echo "Just a test"
@@ -21,3 +21,18 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+  
+  run-windows-commands:
+
+    runs-on: windows-latest
+
+    steps:
+
+      - name: Directory powershell
+        run: Get-Location
+      
+      - name: Directory bash
+        run: pwd
+        shell: bash
+
+
