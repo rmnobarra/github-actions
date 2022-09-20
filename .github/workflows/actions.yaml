@@ -12,4 +12,4 @@ jobs:
         with:
           who-to-greet: Mamaco
       - name: Log Greeting time
-        run: echo "{{ steps.greet.outputs.timestamp }}"
+        run: echo "{{ steps.greet.outputs.time }}"
